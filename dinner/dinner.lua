@@ -163,14 +163,14 @@ function draw_guests()
   if g.dragging then
 
    -- draw guest under mouse
-   spr(g.sprite,g.x,g.y,1,2)
+   spr(g.sprite,g.x,g.y)
    print(g.name,g.x+3,g.y-8,5)
 
   elseif g.seat > 0 then
 
    -- draw guest in chair
    local s = seats[g.seat]
-   spr(g.sprite,s.x,s.y,1,2)
+   spr(g.sprite,s.x,s.y)
    print(g.name,s.x+3,s.y-8,5)
 
   end
@@ -192,7 +192,7 @@ function draw_guest_ui()
   x += 14
 
   if g.seat == 0 and not g.dragging then
-   spr(g.sprite,x,y,1,2)
+   spr(g.sprite,x,y)
    print(g.name,x+3,y-8,5)
   end
 
@@ -221,7 +221,7 @@ function draw_ui()
   end
 
   if win then
-   spr(65,52,50,4,4)
+   spr(17,52,50,4,4)
    print("press X to play again",30,10,7)
   end
 
